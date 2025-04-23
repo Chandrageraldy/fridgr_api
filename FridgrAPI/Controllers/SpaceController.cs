@@ -50,6 +50,17 @@ namespace FridgrAPI.Controllers
             return space;
         }
 
+        // GET: api/Space/exclude/spaceId/userId
+        [HttpGet("exclude/{spaceId:int}/{userId}")]
+        public async Task<ActionResult<IEnumerable<Space>>> GetSpacesExcludingById(int spaceId, string userId)
+        {
+            var spaces = await _context.Space
+                                       .Where(space => space.UserId == userId && space.SpaceId != spaceId)
+                                       .ToListAsync();
+
+            return spaces;
+        }
+
         // POST: api/Space
         [HttpPost]
         public async Task<ActionResult<Space>> PostSpace(Space space)

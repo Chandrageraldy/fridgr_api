@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FridgrAPI.Migrations
 {
     [DbContext(typeof(FridgrDBContext))]
-    [Migration("20250416171805_FridgrMigration")]
+    [Migration("20250418162929_FridgrMigration")]
     partial class FridgrMigration
     {
         /// <inheritdoc />
