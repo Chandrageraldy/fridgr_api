@@ -5,7 +5,7 @@
 namespace FridgrAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class FridgrMigration : Migration
+    public partial class fridgrMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -68,8 +68,7 @@ namespace FridgrAPI.Migrations
                 {
                     userId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    profileImageUrl = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
+                    email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
                 },
                 constraints: table =>
                 {

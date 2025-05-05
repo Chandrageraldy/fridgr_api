@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FridgrAPI.Migrations
 {
     [DbContext(typeof(FridgrDBContext))]
-    [Migration("20250418162929_FridgrMigration")]
-    partial class FridgrMigration
+    [Migration("20250505090832_fridgrMigration")]
+    partial class fridgrMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -151,11 +151,6 @@ namespace FridgrAPI.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("email");
-
-                    b.Property<string>("ProfileImageUrl")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)")
-                        .HasColumnName("profileImageUrl");
 
                     b.Property<string>("Username")
                         .HasMaxLength(50)

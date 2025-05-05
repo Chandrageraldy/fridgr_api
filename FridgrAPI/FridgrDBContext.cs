@@ -18,7 +18,7 @@ namespace FridgrAPI
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                optionsBuilder.UseSqlServer("Data Source=fridgrdbinstance.ce0wymt4lyde.us-east-1.rds.amazonaws.com;Initial Catalog=fridgrdb;User ID=admin;Password=Abc123123!;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
         }
 
@@ -60,7 +60,6 @@ namespace FridgrAPI
                 entity.Property(e => e.UserId).HasColumnName("userId");
                 entity.Property(e => e.Username).HasColumnName("username").HasMaxLength(50);
                 entity.Property(e => e.Email).HasColumnName("email").HasMaxLength(50);
-                entity.Property(e => e.ProfileImageUrl).HasColumnName("profileImageUrl").HasMaxLength(500);
             });
 
             modelBuilder.Entity<Grocery>(entity => {

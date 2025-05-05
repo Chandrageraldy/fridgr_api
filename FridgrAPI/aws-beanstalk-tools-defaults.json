@@ -1,0 +1,20 @@
+
+{
+    "region" : "us-east-1",
+    "configuration" : "Debug",
+    "framework"     : "net8.0",
+    "self-contained" : true,
+    "application"    : "FridgrAPI",
+    "environment"    : "FridgrAPI-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-017bbcfd2106e2eed\";\"aws:ec2:vpc,Subnets\"=\"subnet-07d79e3f73baec8e2\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.10.0 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "fridgrapi-dev",
+    "instance-type"        : "t2.micro",
+    "key-pair"             : "vockey",
+    "instance-profile"     : "LabInstanceProfile",
+    "service-role"         : "LabRole",
+    "proxy-server"         : "nginx"
+}

@@ -149,11 +149,6 @@ namespace FridgrAPI.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("email");
 
-                    b.Property<string>("ProfileImageUrl")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)")
-                        .HasColumnName("profileImageUrl");
-
                     b.Property<string>("Username")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
